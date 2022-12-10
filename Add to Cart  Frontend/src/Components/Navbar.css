@@ -1,0 +1,195 @@
+/*---------- Common classes-------- */
+.flex{
+    display: flex;
+}
+
+/*---------- Navbar css -------*/
+.container {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+}
+.navBar ul li {
+    display: inline-block;
+    margin-left:20px;
+    list-style-type: none;
+    font-size: 1rem;
+}
+.navBar ul h1 {
+    text-align: rigth;
+    margin: 0;
+} 
+
+.cardBtn{
+    margin-right: 40px;
+}
+.cardBtn .button{
+    margin-top: 30px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: black;
+    padding:5px 10px;
+    border: 1px solid black;
+}
+.cardBtn .button .count{
+    color: #fff;
+    background-color: black;
+    padding:5px 7px;
+    font-size: 0.6rem;
+    border-radius:50%;
+}
+
+/*--------- Discription box css Start----------*/
+.shop {
+    width: 100%;
+    height:150px;
+    background-color:black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.shop h2{   
+    margin: 0;
+    font-size: 2.7rem;
+} 
+.shop p{
+    margin-top:10px;
+}
+/*--------- Discription box css end----------*/
+/*--------- box-card css Start----------*/
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+}
+
+.card {
+    margin: 5px;
+    border: 1px solid rgb(123, 122, 122);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.card img{
+    width: 90%;
+    
+}
+.card img:hover{
+    transform: scale(1.1);
+    transition: all 0.7s ease;
+}   
+.p-2{
+    font-size: 1rem;
+    background-color:black;
+    color: #fff;
+    padding: 3px 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.search{
+    padding: 5px;
+}
+.card .title{
+    text-align: center;
+    font-size: 1rem;
+    margin:10px 0;
+    padding:0 10px;
+}
+
+.card .price{
+    color: black;
+    margin-top:10px;
+    font-size: 1rem;
+}
+
+.card .btn{
+    background-color: black;
+    color: #fff;
+    font-size: 1rem;
+    border: 1px solid rgb(134, 132, 132);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.card .btn:hover{
+    background-color: #fff;
+    color:black;
+  
+}
+/*------- media query css -------*/
+@media(max-width:1030px){
+    .grid{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+    
+}
+@media(max-width:965px){
+    .navBar {
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    .cardBtn{
+        margin-bottom: 20px;
+    }
+    
+}
+@media(max-width:868px){
+    .grid{
+        grid-template-columns:1fr 1fr;
+    }  
+}
+@media(max-width:810px){
+    .cardBtn{
+      position: relative;
+      left: 20px;
+    }
+
+    .navBar ul li:nth-child(1){
+        background-color: black;
+        color: #fff;
+        width: 100%;
+    }
+    .navBar ul{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+   
+    .navBar ul li {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .p-2{
+        margin-top: 10px;
+    }
+    .navBar select{
+        margin-bottom: 20px;
+    }
+}
+@media(max-width:550px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+    .card img{
+        width: 70%;     
+    }
+}
